@@ -1,39 +1,67 @@
-## INSTRUCTION OF DEPLOY WEBSITE ON SURGE (DONT USE POWERSHALL 💣✂)
-
-- DOWNLOAD SURGE :
+## INSTRUCTION OF DEPLOY WEBSITE ON SURGE - DOWNLOAD SURGE (DONT USE POWERSHALL 💣✂)
 
 ### 1st way :
-
-`npm install --global surge `
-`cd dist`
-`surge`
-
+``` 
+npm install --global surge 
+cd dist
+surge 
+```
 ### 2nd way :
-normal : 
-`npm install --global surge `
-`npm run build`
-`surge dist`
-react : 
-- `npm install --global surge `
--  public : `_redirects` file in `dist` folder
-- `npm run build`
-- copy `index.html` code and paste to `200.html` in `dist` folder
-- `surge dist`
+### Normal : 
+---
+- Run in the terminal : 
+ 
+```
+npm install --global surge 
+npm run build
+surge dist
+```
+### React :
+--- 
+- Run in the terminal : 
+```
+npm install --global surge 
+```
 
-- First install surge, if you haven’t already : `npm install --global surge `
-- Run `npm run build`.
-- Deploy to surge by typing `surge dist`.
-- You can also deploy to a custom domain by adding surge dist yourdomain.com.
-- custom domain create process :
+-  public : Create  `_redirects` file in `public` folder and transfer to `dist` folder
+```
+npm run build
+```
+- copy `index.html` code and paste to `200.html` in `dist` folder then : 
+```
+surge dist
+```
+### Custom Domain name :
+--- 
+- First install surge, if you haven’t already :
+```
+ `npm install --global surge 
+ ```
+- Run in the terminal : 
+ 
+```
+npm run build
+```
+- Deploy to surge by typing 
+```
+surge dist 
+```
+- You can also deploy to a custom domain by adding surge dist yourdomain.com.<BR>
+ **custom domain create process** :
   - create a folder in public folder and name it : `CNAME` , put the url : `sihambintahabib-assairment.surge.sh`
-- for **_react_** add a `_redirects` file in public folder , write this : `/* /index.html 200`
+### React_route + Firebase :
+--- 
+- for **_react_route + firebase** add a `_redirects` file in public folder , write this in the file : `/* /index.html 200`
 - Run `npm run build` to add the `_redirects` file in `dist` folder
 - copy `index.html` code and paste to `200.html` in `dist` folder
+
+--- 
 
 Visit the website for more information :
 `https://vite.dev/guide/static-deploy.html#surge:~:text=firebase%20deploy.-,Surge,to%20a%20custom%20domain%20by%20adding%20surge%20dist%20yourdomain.com.,-Azure%20Static%20Web`
 
-## ## INSTRUCTION OF DEPLOY WEBSITE ON netlify / cloudflare
+---
+## INSTRUCTION OF DEPLOY WEBSITE ON netlify / cloudflare
 
 ড্র্যাগ এন্ড ড্রপ করে netlify / cloudflare এ রিলিজ দিলে react রাউটার সরাসরি কাজ করবে না। সেটা করার জন্য তোমার dist ফোল্ডার ড্র্যাগ করে ড্রপ করার আগে একটা ফাইল তৈরি করে নিতে হবে। সেই ফাইল এর নাম হবে: `_redirects` আর তারমধ্যে জাস্ট এক লাইন থাকবে। সেখানে লেখা থাকবে:
 `/* /index.html 200`
@@ -131,11 +159,20 @@ downloads : `npm i react-icons`
 downloads : `  npm i axios`
 
 ---
+## INSTRUCTION OF Install CustomTheam 
 
-problem :
+Install Yeoman and the VS Code Extension Generator:
+```
+npm install -g yo generator-code
+```
+Generate a New Theme Project.
 
-1. daisy ui
-   2.how to learn react
-2. props
-3. use
-4. usestate
+```
+yo code
+```
+Youtube Video : https://www.youtube.com/watch?v=i8zZ6rwItZ4&list=LL&index=10 <br>
+Private Github link : https://github.com/Sihambintahabib-ux/vsCode-theme-change.git <br>
+Website : https://themes.vscode.one/
+
+---
+
