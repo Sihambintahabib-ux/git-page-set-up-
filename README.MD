@@ -1,76 +1,3 @@
-## INSTRUCTION OF DEPLOY WEBSITE ON SURGE - DOWNLOAD SURGE (DONT USE POWERSHALL 💣✂)
-
-### 1st way :
-``` 
-npm install --global surge 
-cd dist
-surge 
-```
-### 2nd way :
-### Normal : 
----
-- Run in the terminal : 
- 
-```
-npm install --global surge 
-npm run build
-surge dist
-```
-### React :
---- 
-- Run in the terminal : 
-```
-npm install --global surge 
-```
-
--  public : Create  `_redirects` file in `public` folder and transfer to `dist` folder
-```
-npm run build
-```
-- copy `index.html` code and paste to `200.html` in `dist` folder then : 
-```
-surge dist
-```
-### Custom Domain name :
---- 
-- First install surge, if you haven’t already :
-```
- `npm install --global surge 
- ```
-- Run in the terminal : 
- 
-```
-npm run build
-```
-- Deploy to surge by typing 
-```
-surge dist 
-```
-- You can also deploy to a custom domain by adding surge dist yourdomain.com.<BR>
- **custom domain create process** :
-  - create a folder in public folder and name it : `CNAME` , put the url : `sihambintahabib-assairment.surge.sh`
-### React_route + Firebase :
---- 
-- for **_react_route + firebase** add a `_redirects` file in public folder , write this in the file : `/* /index.html 200`
-- Run `npm run build` to add the `_redirects` file in `dist` folder
-- copy `index.html` code and paste to `200.html` in `dist` folder
-
---- 
-
-Visit the website for more information :
-`https://vite.dev/guide/static-deploy.html#surge:~:text=firebase%20deploy.-,Surge,to%20a%20custom%20domain%20by%20adding%20surge%20dist%20yourdomain.com.,-Azure%20Static%20Web`
-
----
-## INSTRUCTION OF DEPLOY WEBSITE ON netlify / cloudflare
-
-ড্র্যাগ এন্ড ড্রপ করে netlify / cloudflare এ রিলিজ দিলে react রাউটার সরাসরি কাজ করবে না। সেটা করার জন্য তোমার dist ফোল্ডার ড্র্যাগ করে ড্রপ করার আগে একটা ফাইল তৈরি করে নিতে হবে। সেই ফাইল এর নাম হবে: `_redirects` আর তারমধ্যে জাস্ট এক লাইন থাকবে। সেখানে লেখা থাকবে:
-`/* /index.html 200`
-
-## React code clone from react
-
-- clone from github : `git clone url`
-- run `npm i`
-
 ## INSTRUCTION OF VITE FOR REACT
 
 ### 1st process :
@@ -106,8 +33,18 @@ Visit the website for more information :
 
 ## INSTRUCTION OF Install daisy
 
-- download : `npm i -D daisyui@latest`
-- file import in index.css : `@plugin "daisyui";`
+- download : 
+```
+npm i -D daisyui@latest
+```
+- file import in index.css : ` @plugin "daisyui";`
+- turn off dark mode - 
+```
+ @plugin "daisyui"{
+themes: light-default;
+};
+```
+website link : https://daisyui.com/docs/themes/?lang=en
 
 ## INSTRUCTION OF Install Toastify
 
@@ -122,7 +59,10 @@ Visit the website for more information :
 
 ## INSTRUCTION OF Install React-router
 
-- Downoad : `npm i react-router`
+- Downoad : 
+```
+npm i react-router
+```
 - Create ROUTER and RENDER : add these code into `main.jsx`
 
 ```
@@ -150,6 +90,121 @@ ReactDOM.createRoot(root).render(
 
 - ![alt text](image.png)
 
+
+
+
+
+## INSTRUCTION OF DEPLOY WEBSITE ON SURGE - DOWNLOAD SURGE (DONT USE POWERSHALL 💣✂)
+
+### 1st way :
+``` 
+npm install --global surge 
+cd dist
+surge 
+```
+### 2nd way :
+### Normal : 
+---
+- Run in the terminal : 
+ 
+```
+npm install --global surge 
+npm run build
+surge dist
+```
+### React :
+--- 
+- Run in the terminal : 
+```
+npm install --global surge 
+```
+
+-  public : Create  `_redirects` file in `public` folder and transfer to `dist` folder
+```
+npm run build
+```
+- copy `index.html` code and paste to `200.html` in `dist` folder then : 
+```
+surge dist
+
+```
+### Custom Domain name :
+--- 
+- First install surge, if you haven’t already :
+```
+ `npm install --global surge 
+ ```
+- Run in the terminal : 
+ 
+```
+npm run build
+```
+- Deploy to surge by typing 
+```
+surge dist 
+```
+- You can also deploy to a custom domain by adding surge dist yourdomain.com.<BR>
+ **custom domain create process** :
+  - create a folder in public folder and name it : `CNAME` , put the url : `sihambintahabib-assairment.surge.sh`
+### React_route + Firebase :
+--- 
+- for **_react_route + firebase** 
+- add a `_redirects` file in public folder , write this in the file : `/* /index.html 200`
+- Run `npm run build` to add the `_redirects` file in `dist` folder
+- copy `index.html` code and paste to `200.html` in `dist` folder
+
+--- 
+
+Visit the website for more information :
+`https://vite.dev/guide/static-deploy.html#surge:~:text=firebase%20deploy.-,Surge,to%20a%20custom%20domain%20by%20adding%20surge%20dist%20yourdomain.com.,-Azure%20Static%20Web`
+
+---
+## INSTRUCTION OF DEPLOY WEBSITE ON netlify / cloudflare
+
+ড্র্যাগ এন্ড ড্রপ করে netlify / cloudflare এ রিলিজ দিলে react রাউটার সরাসরি কাজ করবে না। সেটা করার জন্য তোমার dist ফোল্ডার ড্র্যাগ করে ড্রপ করার আগে একটা ফাইল তৈরি করে নিতে হবে। সেই ফাইল এর নাম হবে: `_redirects` আর তারমধ্যে জাস্ট এক লাইন থাকবে। সেখানে লেখা থাকবে:
+```
+/* /index.html 200
+```
+
+--- 
+
+## firebase 
+run : ```  npm install firebase ```
+
+```
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDI0Wge3VTum0d_VgViA5NI4cHU7eGJK68",
+  authDomain: "assairment--9.firebaseapp.com",
+  projectId: "assairment--9",
+  storageBucket: "assairment--9.firebasestorage.app",
+  messagingSenderId: "168057864503",
+  appId: "1:168057864503:web:3c48f4aa34a18c2b7cdab2",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+// Initialize Firebase Authentication and get a reference to the service
+export const auth = getAuth(app);
+
+
+
+```
+---
+
+
+
+## React code clone from react
+
+- clone from github : `git clone url`
+- run `npm i`
 ## INSTRUCTION OF Install React-icons
 
 downloads : `npm i react-icons`
@@ -170,9 +225,29 @@ Generate a New Theme Project.
 ```
 yo code
 ```
+
 Youtube Video : https://www.youtube.com/watch?v=i8zZ6rwItZ4&list=LL&index=10 <br>
 Private Github link : https://github.com/Sihambintahabib-ux/vsCode-theme-change.git <br>
 Website : https://themes.vscode.one/
 
 ---
 
+## Github setup : 
+- Origin remote (remote repositories associated with the project) :  
+```
+git remote -v
+```
+- change the remote URL
+```
+git remote set-url origin `URL : https://github.com/ferdouszihad/dragon-news-firebase.git`
+```
+- force push 
+```
+git....push --force
+```
+---
+
+
+
+git repo link  : https://github.com/programming-hero-web-course2/b12-a9-firesheild-Sihambintahabib-ux.git
+live link :  https://sihambintahabib-assairment-9.surge.sh/services
