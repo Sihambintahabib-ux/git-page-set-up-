@@ -33,17 +33,21 @@
 
 ## INSTRUCTION OF Install daisy
 
-- download : 
+- download :
+
 ```
 npm i -D daisyui@latest
 ```
+
 - file import in index.css : ` @plugin "daisyui";`
-- turn off dark mode - 
+- turn off dark mode -
+
 ```
  @plugin "daisyui"{
 themes: light-default;
 };
 ```
+
 website link : https://daisyui.com/docs/themes/?lang=en
 
 ## INSTRUCTION OF Install Toastify
@@ -59,10 +63,12 @@ website link : https://daisyui.com/docs/themes/?lang=en
 
 ## INSTRUCTION OF Install React-router
 
-- Downoad : 
+- Downoad :
+
 ```
 npm i react-router
 ```
+
 - Create ROUTER and RENDER : add these code into `main.jsx`
 
 ```
@@ -90,86 +96,108 @@ ReactDOM.createRoot(root).render(
 
 - ![alt text](image.png)
 
-
-
-
-
 ## INSTRUCTION OF DEPLOY WEBSITE ON SURGE - DOWNLOAD SURGE (DONT USE POWERSHALL 💣✂)
 
 ### 1st way :
-``` 
-npm install --global surge 
+
+```
+npm install --global surge
 cd dist
-surge 
+surge
 ```
+
 ### 2nd way :
-### Normal : 
+
+### Normal :
+
 ---
-- Run in the terminal : 
- 
+
+- Run in the terminal :
+
 ```
-npm install --global surge 
+npm install --global surge
 npm run build
 surge dist
 ```
+
 ### React :
---- 
-- Run in the terminal : 
+
+---
+
+- Run in the terminal :
+
 ```
-npm install --global surge 
+npm install --global surge
 ```
 
--  public : Create  `_redirects` file in `public` folder and transfer to `dist` folder
+- public : Create `_redirects` file in `public` folder and transfer to `dist` folder
+
 ```
 npm run build
 ```
-- copy `index.html` code and paste to `200.html` in `dist` folder then : 
+
+- copy `index.html` code and paste to `200.html` in `dist` folder then :
+
 ```
 surge dist
 
 ```
+
 ### Custom Domain name :
---- 
+
+---
+
 - First install surge, if you haven’t already :
+
 ```
- `npm install --global surge 
- ```
-- Run in the terminal : 
- 
+ `npm install --global surge
+```
+
+- Run in the terminal :
+
 ```
 npm run build
 ```
-- Deploy to surge by typing 
+
+- Deploy to surge by typing
+
 ```
-surge dist 
+surge dist
 ```
+
 - You can also deploy to a custom domain by adding surge dist yourdomain.com.<BR>
- **custom domain create process** :
+  **custom domain create process** :
   - create a folder in public folder and name it : `CNAME` , put the url : `sihambintahabib-assairment.surge.sh`
+
 ### React_route + Firebase :
---- 
-- for **_react_route + firebase** 
+
+---
+
+- for **\_react_route + firebase**
 - add a `_redirects` file in public folder , write this in the file : `/* /index.html 200`
 - Run `npm run build` to add the `_redirects` file in `dist` folder
 - copy `index.html` code and paste to `200.html` in `dist` folder
 
---- 
+---
 
 Visit the website for more information :
 `https://vite.dev/guide/static-deploy.html#surge:~:text=firebase%20deploy.-,Surge,to%20a%20custom%20domain%20by%20adding%20surge%20dist%20yourdomain.com.,-Azure%20Static%20Web`
 
 ---
+
 ## INSTRUCTION OF DEPLOY WEBSITE ON netlify / cloudflare
 
 ড্র্যাগ এন্ড ড্রপ করে netlify / cloudflare এ রিলিজ দিলে react রাউটার সরাসরি কাজ করবে না। সেটা করার জন্য তোমার dist ফোল্ডার ড্র্যাগ করে ড্রপ করার আগে একটা ফাইল তৈরি করে নিতে হবে। সেই ফাইল এর নাম হবে: `_redirects` আর তারমধ্যে জাস্ট এক লাইন থাকবে। সেখানে লেখা থাকবে:
+
 ```
 /* /index.html 200
 ```
 
---- 
+---
 
-## firebase 
-run : ```  npm install firebase ```
+## firebase
+
+run : ` npm install firebase`
 
 ```
 // Import the functions you need from the SDKs you need
@@ -197,14 +225,14 @@ export const auth = getAuth(app);
 
 
 ```
+
 ---
-
-
 
 ## React code clone from react
 
 - clone from github : `git clone url`
 - run `npm i`
+
 ## INSTRUCTION OF Install React-icons
 
 downloads : `npm i react-icons`
@@ -214,12 +242,15 @@ downloads : `npm i react-icons`
 downloads : `  npm i axios`
 
 ---
-## INSTRUCTION OF Install CustomTheam 
+
+## INSTRUCTION OF Install CustomTheam
 
 Install Yeoman and the VS Code Extension Generator:
+
 ```
 npm install -g yo generator-code
 ```
+
 Generate a New Theme Project.
 
 ```
@@ -232,22 +263,77 @@ Website : https://themes.vscode.one/
 
 ---
 
-## Github setup : 
-- Origin remote (remote repositories associated with the project) :  
+## Github setup :
+
+- Origin remote (remote repositories associated with the project) :
+
 ```
 git remote -v
 ```
+
 - change the remote URL
+
 ```
 git remote set-url origin `URL : https://github.com/ferdouszihad/dragon-news-firebase.git`
 ```
-- force push 
+
+- force push
+
 ```
 git....push --force
 ```
+
 ---
 
+## Backend installed
+
+1. run :
+
+```
+npm init -y
+```
+
+2. add this line : "start": "node index.js",
+
+```
+ "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+```
+3. installed Express.js + cors
+<br> link : https://expressjs.com/
+```
+npm i express cors
+```
+Note : Express.js + cors add in the dependence 
+4. create a `.gitignore` file write `node_modules` file name 
+
+5. add code in index.js:
+![alt text](image.png)
+
+6. install nodemon : [what is nodemon and benefit of it]
+```
+    npm install -g nodemon
+``` 
+
+7. run to start code : 
+```
+nodemon index.js
+```
+or : 
+```
+node index.js
+```
+
+8. search : http://localhost:3000/
 
 
-git repo link  : https://github.com/programming-hero-web-course2/b12-a9-firesheild-Sihambintahabib-ux.git
-live link :  https://sihambintahabib-assairment-9.surge.sh/services
+
+
+
+
+---
+
+git repo link : https://github.com/programming-hero-web-course2/b12-a9-firesheild-Sihambintahabib-ux.git
+live link : https://sihambintahabib-assairment-9.surge.sh/services
