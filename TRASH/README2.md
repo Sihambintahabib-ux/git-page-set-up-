@@ -77,7 +77,7 @@ import ReactDOM from "react-dom/client";
 
 <!-- ?
  import { createBrowserRouter } from "react-router";
-import { RouterProvider } from "react-router/dom";
+import { RouterProvider } from "react-router/dom"; 
 ? -->
 
 
@@ -101,7 +101,7 @@ ReactDOM.createRoot(root).render(
 
 ## INSTRUCTION OF DEPLOY WEBSITE ON SURGE - DOWNLOAD SURGE (DONT USE POWERSHALL 💣✂)
 
-### 1st way : ❌
+### 1st way :
 
 ```
 npm install --global surge
@@ -109,9 +109,9 @@ cd dist
 surge
 ```
 
-## 2nd way :
+### 2nd way :
 
-### Normal : ❌
+### Normal :
 
 ---
 
@@ -123,7 +123,7 @@ npm run build
 surge dist
 ```
 
-### React : ❌
+### React :
 
 ---
 
@@ -146,7 +146,7 @@ surge dist
 
 ```
 
-### Custom Domain name : ✅
+### Custom Domain name :
 
 ---
 
@@ -172,17 +172,14 @@ surge dist
   **custom domain create process** :
   - create a folder in public folder and name it : `CNAME` , put the url : `sihambintahabib-assairment.surge.sh`
 
-### React_route + Firebase : ✅✅
+### React_route + Firebase :
 
 ---
 
-- `npm install --global surge`
 - for **\_react_route + firebase**
 - add a `_redirects` file in public folder , write this in the file : `/* /index.html 200`
 - Run `npm run build` to add the `_redirects` file in `dist` folder
 - copy `index.html` code and paste to `200.html` in `dist` folder
-- Deploy `surge dist`
-- optional : create a folder in public folder and name it : `CNAME` , put the url : `sihambintahabib-assairment.surge.sh`
 
 ---
 
@@ -203,8 +200,7 @@ Visit the website for more information :
 
 ## firebase
 
-1. run : ` npm install firebase`
-2. create a new file (Firebase-config.js) and paste it :
+run : ` npm install firebase`
 
 ```
 // Import the functions you need from the SDKs you need
@@ -292,32 +288,59 @@ git....push --force
 
 ---
 
-## live link :
+## Backend installed
 
-ASSAIREMENT : 9
-git repo link : https://github.com/Sihambintahabib-ux/assairment-9.git
-<br>
-live link : https://sihambintahabib-assairment-9.surge.sh/services
+1. run :
+
+```
+npm init -y
+```
+
+2. add this line : "start": "node index.js",
+
+```
+ "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+```
+3. installed Express.js + cors + mongodb
+<br> link : https://expressjs.com/
+```
+npm i express cors mongodb 
+```
+or 
+```
+    npm install mongodb --save
+```
+Note : Express.js + cors add in the dependence 
+4. create a `.gitignore` file write `node_modules` file name 
+
+5. add code in index.js:
+![alt text](image.png)
+
+6. install nodemon : [what is nodemon and benefit of it]
+```
+    npm install -g nodemon
+``` 
+
+7. run to start code : 
+```
+nodemon index.js
+```
+or : 
+```
+node index.js
+```
+
+8. search : http://localhost:3000/
+
+
+
+
+
 
 ---
 
-ASSAIREMENT : 10
-code : Code For Counting Ass-10 on 60 Marks : (marks60)-ass10#inc-ExM25
-
-client :
-git repo link : https://github.com/Sihambintahabib-ux/assairment-10-client.git
-<br>
-live link : https://sihambintahabib-assairment10.surge.sh/
-<br>
-server :
-git repo link : https://github.com/Sihambintahabib-ux/assairment-10-server.git
-<br>
-live link : https://assairment10.vercel.app/
-
-## https://vercel.com/sihams-projects-0a3f7554/assairment10
-
-client git repo: https://github.com/Sihambintahabib-ux/assairment-10-client.git
-live link : https://sihambintahabib-assairment10.surge.sh/
-server git repo: https://github.com/Sihambintahabib-ux/assairment-10-server.git
-
-Code For Counting Ass-10 on 60 Marks : (marks60)-ass10#inc-ExM25
+git repo link : https://github.com/programming-hero-web-course2/b12-a9-firesheild-Sihambintahabib-ux.git
+live link : https://sihambintahabib-assairment-9.surge.sh/services
