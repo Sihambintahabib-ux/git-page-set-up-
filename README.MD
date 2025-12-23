@@ -53,9 +53,9 @@ website link : https://daisyui.com/docs/themes/?lang=en
 ## INSTRUCTION OF Install Toastify
 
 - download : `npm i react-toastify@11.0.0-0`
-- import into app.jsx : `import { ToastContainer, toast } from 'react-toastify';`
-- import into app.jsx : `import { ToastContainer, toast } from 'react-toastify';`
-- Place the `<ToastContainer />` component at the root level of your application (e.g., inside your App.JSX component's return statement) where you want the toasts to appear.
+- import into main.jsx : `import { ToastContainer } from 'react-toastify';`
+
+- Place the `<ToastContainer />` component at the root level of your application (e.g., inside your main.JSX component's return statement) where you want the toasts to appear.
 - ADD THE ALERT : `toast ('YOUR COMMENT')` ALSO IMPORT THE toast from the react `import { toast) from "react-toastify";`
 
 - Visit the website for more information :
@@ -153,7 +153,7 @@ surge dist
 - First install surge, if you haven’t already :
 
 ```
- `npm install --global surge
+ npm install --global surge
 ```
 
 - Run in the terminal :
@@ -179,10 +179,25 @@ surge dist
 - `npm install --global surge`
 - for **\_react_route + firebase**
 - add a `_redirects` file in public folder , write this in the file : `/* /index.html 200`
+- optional : create a folder in public folder and name it : `CNAME` , put the url : `sihambintahabib-assairment.surge.sh`
 - Run `npm run build` to add the `_redirects` file in `dist` folder
 - copy `index.html` code and paste to `200.html` in `dist` folder
 - Deploy `surge dist`
-- optional : create a folder in public folder and name it : `CNAME` , put the url : `sihambintahabib-assairment.surge.sh`
+
+-- for 1st time deploy :
+1st :
+
+- `npm install --global surge`
+- public : `_redirects` : `/* /index.html 200`
+- public : `CNAME` : `sihambintahabib-assairment$.surge.sh`
+- `npm run build`
+- dist : `index.html` -> `200.html`
+- `surge dist`
+  -- for 2nd time deploy :
+  1st : `npm run build`
+  2nd : copy `index.html` code and paste to `200.html` in `dist` folder
+  3rd : `surge dist`
+  [ changer vercel client site domain url by surge url : https://vercel.com/sihams-projects-0a3f7554/assairment11/settings/environment-variables]
 
 ---
 
@@ -203,8 +218,13 @@ Visit the website for more information :
 
 ## firebase
 
-1. run : ` npm install firebase`
-2. create a new file (Firebase-config.js) and paste it :
+1. run :
+
+```
+ npm install firebase
+```
+
+2. create a new folder > file (firebase-config.js) and paste it :
 
 ```
 // Import the functions you need from the SDKs you need
@@ -216,12 +236,10 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDI0Wge3VTum0d_VgViA5NI4cHU7eGJK68",
-  authDomain: "assairment--9.firebaseapp.com",
-  projectId: "assairment--9",
-  storageBucket: "assairment--9.firebasestorage.app",
-  messagingSenderId: "168057864503",
-  appId: "1:168057864503:web:3c48f4aa34a18c2b7cdab2",
+
+//generate firebase key -> add web then generate key :
+<!-- //  https://console.firebase.google.com/u/0/project/assairment-11-ddac8/settings/general/web:MWM0YWVlMWQtMjk1Zi00MjI2LWE2OGUtNjQ5MzJkOWJjZjk4 -->
+
 };
 
 // Initialize Firebase
@@ -235,22 +253,120 @@ export const auth = getAuth(app);
 
 ---
 
-## React code clone from react
+## React Hook form
+
+1. Install :
+
+```
+npm install react-hook-form
+```
+
+2. Import useForm and desturture required data :
+
+```
+ const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
+```
+
+3.add `register` in inpurt field , Example :
+
+```
+                {...register("name" , {required : 'name is required'})}
+
+```
+
+```
+<input {...register("name" , {required : 'Name is required'})}  />
+```
+
+4. diffeerent value of register :
+
+- required:'' or required : true ✅
+- min
+- max
+- minLength : number or { value : 6 , message : 'min length is 6 '}
+- maxLength : number or { value : 20 , message : 'max length is 20 '}
+- pattern :regex Code
+- validate
+
+5. add `handleSubmit` in form , Example :
+
+```
+ <form onSubmit={handleSubmit}>...</form>
+```
+
+6. create a variable `onSubmit`, Example :
+
+```
+const onSubmit= async data => console.log(data);
+
+```
+
+7. call onSubmit
+
+```
+ <form onSubmit={handleSubmit(onSubmit)}>...</form>
+```
+
+8. Show `error` :
+
+```
+{
+  errors.name && (
+<p className='text-red-500 text-xs mt-1'>
+{errors.name.message}
+</p>
+)}
+```
+
+9. use data of user :
+
+```
+const onSubmit= async data => ;
+    const { name, email, image, password } = data;
+    try{}
+    catch(){}....... other functionality
+
+```
+
+10. `watch` : help to see real time changes
+    link : https://react-hook-form.com/docs/useform/watch
+
+```
+var name1 = watch('name')
+console.log(namw1)
+```
+
+---
+
+## React git code clone from react ❌
 
 - clone from github : `git clone url`
 - run `npm i`
 
 ## INSTRUCTION OF Install React-icons
 
-downloads : `npm i react-icons`
+downloads :
+
+```
+npm i react-icons
+```
 
 ## INSTRUCTION OF Install axios
 
-downloads : `  npm i axios`
+downloads :
+
+```
+npm i axios
+```
 
 ---
 
-## INSTRUCTION OF Install CustomTheam
+## INSTRUCTION OF Install CustomTheam ❌
 
 Install Yeoman and the VS Code Extension Generator:
 
@@ -292,6 +408,368 @@ git....push --force
 
 ---
 
+## gitbash default name change :
+
+Step 1: In your Git Bash terminal, type this and press Enter:
+`notepad ~/.bashrc`
+Step 2: Notepad will open. Add this line at the very bottom:
+
+- for file name with user name:
+  `xport PROMPT_DIRTRIM=2`
+  or
+  `PS1='\u@\h $MSYSTEM \[\033[36m\]\W\[\033[0m\]\n\$ '`
+
+- for user name only with style :
+  ` PS1="\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[0m\]\$ "`
+
+- for user name only , no-style :
+  `PS1='\u@\h $MSYSTEM\n\$ '`
+- for file name
+  `PS1='\u@\h $MSYSTEM \[\033[36m\]\W\[\033[0m\]\n\$ '`
+- for username and 2 folder name :
+  ````PROMPT_COMMAND='SHORT_PATH=$(pwd | grep -o "[^/]*/[^/]*$")'
+  PS1='\u@\h $MSYSTEM /\[\033[36m\]$SHORT_PATH\[\033[0m\]\n\$ ' ```
+  ````
+- for custom message :
+  `parse_git_branch() {
+  git branch 2>/dev/null | grep '*' | sed 's/* //'
+}
+PROMPT_COMMAND='SHORT_PATH=$(pwd | grep -o "[^/]*/[^/]*$")'
+PS1='\[\033[35m\]⚡ Keep Coding\[\033[0m\] | \[\033[36m\]$SHORT_PATH\[\033[0m\] \[\033[33m\]$(parse_git_branch)\[\033[0m\] \$ '`
+
+claude link : https://claude.ai/share/ac61623e-3a54-4617-9855-36f0692b6005
+
+---
+
+## sent img by imgdb img upload :
+
+1. Get Your API Key
+
+Go to https://api.imgbb.com/
+Sign up or log in to your account
+Navigate to your dashboard to get your API key
+Copy and save your API key securely
+
+2. Prepare Your Image
+
+ImgBB accepts images in base64 format or as a direct file upload
+Supported formats: JPG, PNG, BMP, GIF, TIF, WEBP
+Maximum file size: 32 MB
+
+3. Choose Your Upload Method
+   Method A: Upload with Base64 (recommended for web apps)
+
+```
+ //* 1.imgfile set :
+    var imgfile = image[0];
+    // console.log(imgfile);
+    const formData = new FormData();
+    formData.append("image", imgfile);
+    try {
+      //* 2.imgfile set :
+      const { data } = await axios.post(
+        `https://api.imgbb.com/1/upload?key=${
+          import.meta.env.VITE_IMGFILE_APIKEY
+        }`,
+        formData
+      );
+      console.log(data.data.display_url);
+      const imgURL = data?.data?.display_url;
+      console.log(imgURL);
+      // return;
+      //* imgfile set END
+       } catch (err) {
+      console.log(err);
+      toast.error(err?.message);
+    }
+
+```
+
+or create a new folder utiles>index.js :
+
+```
+import axios from "axios";
+
+export const imageUpload = async (imageData) => {
+  const formData = new FormData();
+  formData.append("image", imageData);
+  const { data } = await axios.post(
+    `https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_IMGFILE_APIKEY}`,
+    formData
+  );
+  //   console.log(data.data.display_url);
+  //   const imgURL = data?.data?.display_url;
+  //   console.log(imgURL);
+  return data?.data?.display_url;
+};
+
+```
+
+2. then use imageUpload :
+
+```
+    const { name, email, image, password } = data;
+    var imgfile = image[0];
+      const imgURL = await imageUpload(imgfile);
+
+```
+
+---
+
+## Tanstack quary :
+
+1. Download :
+
+```
+npm i @tanstack/react-query
+
+```
+
+2. add this in `main.js` : https://tanstack.com/query/latest/docs/framework/react/quick-start
+
+```
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query';
+
+// Create a client
+const queryClient = new QueryClient()
+
+<QueryClientProvider client={queryClient}>
+....
+ </QueryClientProvider>
+
+```
+
+- useQuery - for data get : https://tanstack.com/query/latest/docs/framework/react/reference/useQuery
+- useMutation - for POST || PATCH || PUT || DELETE - or any type of changes in data : https://tanstack.com/query/latest/docs/framework/react/reference/useMutation
+
+3. useMutation
+
+```
+ const mutation = useMutation({
+    mutationFn: async (data) => {
+      return await axios.post(`${import.meta.env.VITE_API_URL}/clubs`, data);
+    },
+    onSuccess: (data) => {
+      console.log(data);
+      // Invalidate and refetch
+      QueryClient.invalidateQueries({ queryKey: ["todos"] });
+    },
+    onError: (errors) => {
+      console.log(errors);
+    },
+    onMutate: (data) => {
+      console.log("I will post this data--->", data);
+    },
+    onSettled: (data, error) => {
+      if (data) console.log(data);
+      if (error) console.log(error);
+    },
+    retry: 5,
+
+    //
+  });
+```
+
+4. destructure useMutation data :
+
+```
+ const { isPending, isError, mutateAsync , data ,  reset: mutatereset} = useMutation({
+    mutationFn: async (data) => {
+      return await axios.post(`${import.meta.env.VITE_API_URL}/clubs`, data);
+    },
+    onSuccess: (data) => {
+      console.log(data);
+       mutatereset(),
+      // Invalidate and refetch
+      QueryClient.invalidateQueries({ queryKey: ["todos"] });
+    },
+    onError: (errors) => {
+      console.log(errors);
+    },
+    onMutate: (data) => {
+      console.log("I will post this data--->", data);
+    },
+    onSettled: (data, error) => {
+      if (data) console.log(data);
+      if (error) console.log(error);
+    },
+    retry: 5,
+
+    //
+  });
+```
+
+or using axios :
+
+```
+ // const { user } = useAuth();
+  // const {
+  //   isLoading,
+  //   isError,
+  //   data: adminClubs = [],
+  //   // refetch,
+  // } = useQuery({
+  //   queryKey: ["adminClubs", user?.email],
+  //   queryFn: async () => {
+  //     const result = await axios(`${import.meta.env.VITE_API_URL}/admin-clubs`);
+  //     return result.data;
+  //   },
+  // });
+
+  // console.log("adminClubs", adminClubs);
+  // if (isLoading) return <LoadingSpinner></LoadingSpinner>;
+  // if (isError) return <ErrorPage></ErrorPage>;
+
+```
+
+or using axiosSecure for jwt
+
+```
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+
+const { user } = useAuth();
+  const axiosSecure = useAxiosSecure();
+
+  const {
+    isLoading,
+    isError,
+    data: adminClubs = [],
+    // refetch,
+  } = useQuery({
+    queryKey: ["adminClubs", user?.email],
+    queryFn: async () => {
+      const result = await axiosSecure(`/admin-clubs`);
+      return result.data;
+    },
+  });
+
+  console.log("adminClubs", adminClubs);
+  if (isLoading) return <LoadingSpinner></LoadingSpinner>;
+  if (isError) return <ErrorPage></ErrorPage>;
+```
+
+5. use `mutateAsync`
+
+```
+ const clubData = {
+        clubName: name,
+        description,
+        category,
+        location,
+        membershipFee: parseInt(price),
+        status: "pending",
+        // quantity,
+        managerEmail: user.email,
+        createAt: new Date(),
+        updateAt: new Date(),
+        bannerImage: imgURL,
+      };
+
+      await mutateAsync(clubData);
+
+```
+
+6. use `isPending`
+
+```
+  if (isPending) return <LoadingSpinner></LoadingSpinner>;
+
+```
+
+7. useQuery
+
+```
+ const {
+    isLoading,
+    isError,
+    data: clubs = [],
+    refetch,
+  } = useQuery({
+    queryKey: ["clubs"],
+    queryFn: async () => {
+      const result = await axios(`${import.meta.env.VITE_API_URL}/clubs`);
+      return result.data;
+    },
+  });
+```
+
+or complete version
+
+```
+ const { user } = useAuth();
+  const {
+    isLoading,
+    isError,
+    data: myClubs = [],
+    // refetch,
+  } = useQuery({
+    queryKey: ["myClubs", user?.email],
+    queryFn: async () => {
+      const result = await axios(
+        `${import.meta.env.VITE_API_URL}/my-clubs/${user?.email}`
+      );
+      return result.data;
+    },
+  });
+  console.log(myClubs);
+  if (isLoading) return <LoadingSpinner></LoadingSpinner>;
+  if (isError) return <ErrorPage></ErrorPage>;
+
+```
+
+## download tansstack quart :
+
+1.
+
+```
+npm i @tanstack/react-query-devtools
+```
+
+2. add these line in main.jsx : ` <ReactQueryDevtools initialIsOpen={false} />`
+
+```
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      {/* The rest of your application */}
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
+  )
+}
+```
+
+---
+
+## delete function :
+
+```
+// * delete :
+  //* function handleReject
+    const axiosSecure = useAxiosSecure(); // custom hook
+
+  const handleDelete = async () => {
+    try {
+      await axiosSecure.delete(`/club/${_id}`, {
+        data: {
+          email: data.managerEmail,
+          status: "reject",
+          updateAt,
+        },
+      });
+      toast.success("club delete");
+      console.log(handleReject);
+      refetch();
+    } catch (error) {
+      toast.error(error);
+    }
+  };
+```
+
 ## live link :
 
 ASSAIREMENT : 9
@@ -321,3 +799,20 @@ live link : https://sihambintahabib-assairment10.surge.sh/
 server git repo: https://github.com/Sihambintahabib-ux/assairment-10-server.git
 
 Code For Counting Ass-10 on 60 Marks : (marks60)-ass10#inc-ExM25
+
+---
+
+ASSAIREMENT : 11
+
+client git repo: https://github.com/Sihambintahabib-ux/assairment-11-client.git
+
+server git repo: https://github.com/Sihambintahabib-ux/assairment-11-server.git
+live link : https://sihambintahabib-assairment11.surge.sh/
+admin account : siham04081068@student.ndub.edu.bd
+admin password : ndubsiham
+
+---
+
+## reaxt router queary data get: `useSearchParams`
+
+## reaxt router id get: `useParams`
