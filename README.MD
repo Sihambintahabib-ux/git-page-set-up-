@@ -804,12 +804,12 @@ Code For Counting Ass-10 on 60 Marks : (marks60)-ass10#inc-ExM25
 
 ASSAIREMENT : 11
 
-client git repo: https://github.com/Sihambintahabib-ux/assairment-11-client.git
-
-server git repo: https://github.com/Sihambintahabib-ux/assairment-11-server.git
-live link : https://sihambintahabib-assairment11.surge.sh/
-admin account : siham04081068@student.ndub.edu.bd
-admin password : ndubsiham
+Github serverSite : https://github.com/Sihambintahabib-ux/assairment-11-clientsite.git <br>
+Github clientSite : https://github.com/Sihambintahabib-ux/assairment-11-clientsite.git <br>
+live link : http://sihambintahabib-assairment11.surge.sh/ <br>
+live link : https://graceful-mandazi-0fe39f.netlify.app/ <br>
+Admin Gmail : admin@gmail.com <br>
+Admin Password : admin@gmail.com <br>
 
 ---
 
