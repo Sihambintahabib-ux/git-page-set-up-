@@ -193,9 +193,9 @@ surge dist
 - `surge dist`
 
 ## for 2nd time deploy :
-  1st : `npm run build`
-  2nd : copy `index.html` code and paste to `200.html` in `dist` folder
-  3rd : `surge dist`
+  - 1st : `npm run build`
+  - 2nd : copy `index.html` code and paste to `200.html` in `dist` folder
+  - 3rd : `surge dist`
   [ changer vercel client site domain url by surge url : https://vercel.com/sihams-projects-0a3f7554/assairment11/settings/environment-variables]
 
 ---
