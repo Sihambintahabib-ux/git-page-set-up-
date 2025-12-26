@@ -184,19 +184,18 @@ surge dist
 - copy `index.html` code and paste to `200.html` in `dist` folder
 - Deploy `surge dist`
 
--- for 1st time deploy :
-1st :
-
+## for 1st time deploy :
 - `npm install --global surge`
 - public : `_redirects` : `/* /index.html 200`
 - public : `CNAME` : `sihambintahabib-assairment$.surge.sh`
 - `npm run build`
 - dist : `index.html` -> `200.html`
 - `surge dist`
-  -- for 2nd time deploy :
-  1st : `npm run build`
-  2nd : copy `index.html` code and paste to `200.html` in `dist` folder
-  3rd : `surge dist`
+
+## for 2nd time deploy :
+  - 1st : `npm run build`
+  - 2nd : copy `index.html` code and paste to `200.html` in `dist` folder
+  - 3rd : `surge dist`
   [ changer vercel client site domain url by surge url : https://vercel.com/sihams-projects-0a3f7554/assairment11/settings/environment-variables]
 
 ---

@@ -7,6 +7,7 @@
 - **Other Links** (shared but inaccessible here):
   - Grok share: [https://grok.com/share/c2hhcmQtNA_6c4c5731-f823-420f-8fe8-c614a8bf5818](https://grok.com/share/c2hhcmQtNA_6c4c5731-f823-420f-8fe8-c614a8bf5818?referrer=grok.com)
   - NotebookLM: [https://notebooklm.google.com/notebook/e29143d0-0e45-4240-bec1-06aa73ba8069](https://notebooklm.google.com/notebook/e29143d0-0e45-4240-bec1-06aa73ba8069?referrer=grok.com)
+  - [Sheryians Coding School](https://youtu.be/JALCoY9MQg8?si=KWb2KXuwbkViErDp)
 
 ---
 
