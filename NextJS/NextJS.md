@@ -1,5 +1,11 @@
 <!-- ![](./NextJS.drawio.svg) -->
 
+ROADMAP:
+
+1. [Instalation](https://nextjs.org/docs/app/getting-started/installation#quick-start) ❌
+2. [File structure explain](https://nextjs.org/docs/app/getting-started/project-structure)
+3.
+
 # Module 69.1
 
 ## React in a Nutshell: The Core Principles
@@ -154,7 +160,7 @@ Align with current industry best practices and a thriving developer ecosystem.
 
 ---
 
-# Module 69.2
+# Module 69.2 + 69.3
 
 ## [Instalation](https://nextjs.org/docs/app/getting-started/installation#quick-start) ❌
 
@@ -212,7 +218,7 @@ npm i next@latest react@latest react-dom@latest
 3. it is ready :
    ![alt text](image-1.png)
 
-## file structure explain :
+## File structure explain :
 
 - [src floder](https://nextjs.org/docs/app/api-reference/file-conventions/src-folder#:~:text=Copy%20page-,src%20Folder,-Last%20updated%20October)
   - favicon
@@ -222,7 +228,7 @@ npm i next@latest react@latest react-dom@latest
 
 ---
 
-## file structure explain :
+## [File structure explain](https://nextjs.org/docs/app/getting-started/project-structure) :
 
 When you create a new **Next.js** project with `npx create-next-app@latest` (Next.js 15+ as of late 2025) and select **no TypeScript** (while keeping other defaults like ESLint, Tailwind CSS, src/ directory if chosen, and App Router), the structure is very similar to the TypeScript version but uses plain JavaScript files.
 
@@ -249,10 +255,10 @@ my-next-app/
 ├── .gitignore
 ├── jsconfig.json         # JavaScript config for editor features (replaces tsconfig.json)
 ├── next.config.js        # Next.js configuration
-├── package.json
+├── package.json          # All installed package and dependency file denote here
 ├── tailwind.config.ts    # Tailwind config (often .ts even in JS projects; works fine)
 ├── postcss.config.js     # For Tailwind/PostCSS
-├── eslint.config.mjs     # ESLint config (if selected)
+├── eslint.config.mjs     # ESLint config (if selected) (define all error and how )
 └── README.md
 ```
 
@@ -273,10 +279,17 @@ my-next-app/
 
 - You can still add JSX in `.js` files (Next.js handles it).
 - If you later want TypeScript, just rename files to `.tsx` and add `tsconfig.json`—Next.js supports it seamlessly.
-- As you build, common additions: `middleware.js`, `components/` folder, `lib/` or `utils/` for helpers.
+- As you build, common additions: `proxy.ts` (private route secure by navigate unregister user to login page ) or `middleware.js` , `components/` folder, `lib/` or `utils/` for helpers.
+- `@/` import alias
 
-## This setup leverages React Server Components by default, just like the TypeScript version. For the absolute latest details, refer to the official Next.js docs at nextjs.org/docs/getting-started/project-structure. Start building—it's straightforward in plain JS!
+### type of folder :
 
-# Module 69.3
+- [Top level folder](https://nextjs.org/docs/app/getting-started/project-structure#top-level-folders) :
+  - [top level files](https://nextjs.org/docs/app/getting-started/project-structure#top-level-files)
+- [Route folder](https://nextjs.org/docs/app/getting-started/project-structure#routing-files) :
+
+This setup leverages React Server Components by default, just like the TypeScript version. For the absolute latest details, refer to the official Next.js docs at nextjs.org/docs/getting-started/project-structure. Start building—it's straightforward in plain JS!
+
+# Module 69.4
 
 ---
