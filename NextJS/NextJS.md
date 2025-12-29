@@ -293,3 +293,17 @@ This setup leverages React Server Components by default, just like the TypeScrip
 # Module 69.4
 
 ---
+
+# Module 69.5
+
+---
+
+# Module 69.6
+
+[FILE](./Next%20JS%20_%20Practice%20Sheet%20.pdf)
+
+---
+
+![](./Next%20JS%20_%20Practice%20Sheet%20.pdf)
+
+---
