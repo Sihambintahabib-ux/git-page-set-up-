@@ -2,9 +2,34 @@
 
 ROADMAP:
 
-1. [Instalation](https://nextjs.org/docs/app/getting-started/installation#quick-start) ❌
+1. [Instalation](https://nextjs.org/docs/app/getting-started/installation#quick-start)
 2. [File structure explain](https://nextjs.org/docs/app/getting-started/project-structure)
-3.
+3. [Routing Files](https://nextjs.org/docs/app/getting-started/project-structure#routing-files)
+
+- [Nested routes](https://nextjs.org/docs/app/getting-started/project-structure#nested-routes)
+- [Dynamic routes](https://nextjs.org/docs/app/getting-started/project-structure#dynamic-routes)
+
+6. [linking-and-navigating](https://nextjs.org/docs/app/getting-started/linking-and-navigating)
+
+- [How navigation works](https://nextjs.org/docs/app/getting-started/linking-and-navigating#how-navigation-works)
+
+7. [Nested routes](https://nextjs.org/docs/app/getting-started/project-structure#nested-routes)
+
+---
+
+QUERYIES:
+
+1. File name first alphabet capital or small letter
+
+-
+-
+
+2. Should I use JS or JSX for my pages, components and layout files in Next JS 12?
+
+- https://www.reddit.com/r/nextjs/comments/rgu35x/should_i_use_js_or_jsx_for_my_pages_components/
+- https://www.geeksforgeeks.org/reactjs/what-is-the-difference-between-a-js-and-jsx-file-in-react/
+
+---
 
 # Module 69.1
 
@@ -160,7 +185,7 @@ Align with current industry best practices and a thriving developer ecosystem.
 
 ---
 
-# Module 69.2 + 69.3
+# Module 69.2 + 69.3 File explaine
 
 ## [Instalation](https://nextjs.org/docs/app/getting-started/installation#quick-start) ❌
 
@@ -290,20 +315,171 @@ my-next-app/
 
 This setup leverages React Server Components by default, just like the TypeScript version. For the absolute latest details, refer to the official Next.js docs at nextjs.org/docs/getting-started/project-structure. Start building—it's straightforward in plain JS!
 
-# Module 69.4
+# Module 69.4 Route
+
+[Next JS FILE](./Next%20JS%20_%20Practice%20Sheet%20.pdf)
+[Next JS \_ Practice Sheet .pdf](https://github.com/user-attachments/files/24365304/Next.JS._.Practice.Sheet.pdf)
 
 ---
 
-# Module 69.5
+### Routing & Nested Routes in Next.js App Router (Next.js 16+, December 2025)
+
+Next.js uses **file-system-based routing** in the `app/` directory. The folder structure directly defines your app's URL routes. Nested routes are created simply by nesting folders — no extra configuration needed.
+
+#### Basic Routing Example
+
+**Folder Structure**:
+
+```
+app/
+├── page.tsx              → Route: /
+├── about/
+│   └── page.tsx          → Route: /about
+├── contact/
+│   └── page.tsx          → Route: /contact
+└── blog/
+    └── page.tsx          → Route: /blog
+```
+
+**Explanation**:
+
+- Every folder inside `app/` represents a **route segment**.
+- A folder only becomes a public route when it contains a `page.tsx` file.
+- The root `app/page.tsx` is the homepage (`/`).
+- `app/about/page.tsx` creates the `/about` page.
+- `app/about/page.tsx` here `/page.tsx` is the route render page as child of app page.
+
+#### Nested Routes Example
+
+Nested routes allow you to create deeper URLs like `/dashboard/settings/profile`.
+
+**Folder Structure**:
+
+```
+app/
+├── page.tsx                          → /
+├── dashboard/
+│   ├── page.tsx                      → /dashboard
+│   ├── layout.tsx                    → Shared layout for all /dashboard/* routes
+│   ├── settings/
+│   │   ├── page.tsx                  → /dashboard/settings
+│   │   └── profile/
+│   │       └── page.tsx              → /dashboard/settings/profile
+│   └── analytics/
+│       └── page.tsx                  → /dashboard/analytics
+```
+
+**Explanation**:
+
+- `app/dashboard/page.tsx` → `/dashboard` (main dashboard page)
+- `app/dashboard/settings/page.tsx` → `/dashboard/settings`
+- `app/dashboard/settings/profile/page.tsx` → `/dashboard/settings/profile`
+- The URL path mirrors the folder nesting exactly.
+
+---
+
+# Module 69.5 - nented route with nav link
+
+## Type of linking and navigating
+
+#### How Layouts Work with Nested Routes (Key Benefit)
+
+Layouts are automatically nested too, which is perfect for shared UI.
+
+**Example Files**:
+
+1. **Root Layout** (`app/layout.tsx`) – wraps **everything**:
+
+```tsx
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
+```
+
+2. **Dashboard Layout** (`app/dashboard/layout.tsx`) – wraps all routes under `/dashboard/*`:
+
+```tsx
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex min-h-screen">
+      <aside className="w-64 bg-gray-800 text-white p-4">
+        <h2>Dashboard Sidebar</h2>
+        <nav>
+          <Link href="/dashboard">Overview</Link>
+          <Link href="/dashboard/settings">Settings</Link>
+          <Link href="/dashboard/analytics">Analytics</Link>
+        </nav>
+      </aside>
+      <main className="flex-1 p-8">{children}</main>
+    </div>
+  );
+}
+```
+
+**Result When Visiting `/dashboard/settings/profile`**:
+
+- The page content comes from `app/dashboard/settings/profile/page.tsx`.
+- It is wrapped by:
+  1. Dashboard Layout (`app/dashboard/layout.tsx`) → adds sidebar
+  2. Root Layout (`app/layout.tsx`) → adds `<html>` and `<body>`
+- When navigating between `/dashboard/analytics` and `/dashboard/settings`, the **sidebar stays intact** (no re-render or flicker) because only the changing segment (the page) updates. This is called **partial rendering** — a huge performance and UX win.
+
+#### Dynamic Nested Routes (Bonus Example)
+
+You can combine nesting with dynamic segments:
+
+```
+app/
+└── blog/
+    ├── page.tsx                  → /blog (list of posts)
+    └── [slug]/
+        └── page.tsx              → /blog/my-first-post (individual post)
+```
+
+- `[slug]` captures the dynamic part of the URL.
+- Params are available via `{ params: { slug: string } }` in the page component.
+
+#### Summary Table
+
+| Folder Path                               | URL Route                     | Purpose                       |
+| ----------------------------------------- | ----------------------------- | ----------------------------- |
+| `app/page.tsx`                            | `/`                           | Homepage                      |
+| `app/about/page.tsx`                      | `/about`                      | Static page                   |
+| `app/dashboard/page.tsx`                  | `/dashboard`                  | Dashboard root                |
+| `app/dashboard/settings/page.tsx`         | `/dashboard/settings`         | Nested page                   |
+| `app/dashboard/settings/profile/page.tsx` | `/dashboard/settings/profile` | Deeply nested page            |
+| `app/dashboard/layout.tsx`                | (all /dashboard/\*)           | Shared layout (e.g., sidebar) |
+
+Nested routes + nested layouts make building complex apps (dashboards, admin panels, multi-step forms) clean, performant, and intuitive. No need for complex routing libraries!
+
+For a live example, check the tutorial repo: https://github.com/learnwithsumit/next14-crash-course (look in the `app/` folder).
 
 ---
 
 # Module 69.6
 
-[FILE](./Next%20JS%20_%20Practice%20Sheet%20.pdf)
+---
+
+# Module 69.7
 
 ---
 
-![](./Next%20JS%20_%20Practice%20Sheet%20.pdf)
+# Module 69.8
+
+---
+
+# Module 69.9
 
 ---
