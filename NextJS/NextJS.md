@@ -1,5 +1,13 @@
 <!-- ![](./NextJS.drawio.svg) -->
 
+<!-- https://nextjs.org/docs/app/api-reference/file-conventions/src-folder
+https://nextjs.org/learn/dashboard-app/navigating-between-pages
+https://nextjs.org/docs/app/guides/caching
+https://nextjs.org/docs/pages/api-reference/components/image#props
+https://nextjs.org/docs/app/getting-started/project-structure#routing-files -->
+
+---
+
 ROADMAP:
 
 1. [Instalation](https://nextjs.org/docs/app/getting-started/installation#quick-start)
@@ -14,6 +22,7 @@ ROADMAP:
 - [How navigation works](https://nextjs.org/docs/app/getting-started/linking-and-navigating#how-navigation-works)
 
 7. [Nested routes](https://nextjs.org/docs/app/getting-started/project-structure#nested-routes)
+8. [useRouter](https://nextjs.org/docs/app/api-reference/functions/use-router#userouter)
 
 ---
 
@@ -21,13 +30,21 @@ QUERYIES:
 
 1. File name first alphabet capital or small letter
 
--
--
-
 2. Should I use JS or JSX for my pages, components and layout files in Next JS 12?
 
 - https://www.reddit.com/r/nextjs/comments/rgu35x/should_i_use_js_or_jsx_for_my_pages_components/
 - https://www.geeksforgeeks.org/reactjs/what-is-the-difference-between-a-js-and-jsx-file-in-react/
+
+3. [useRouter()](https://nextjs.org/docs/app/api-reference/functions/use-router#userouter:~:text=%7D-,useRouter(),-router.push(href)
+
+- router.push('/dashboard')
+- router.replace('/dashboard')
+- router.refresh()
+- router.prefetch('/dashboard')
+- router.back()
+- router.forward()
+
+4.
 
 ---
 
@@ -378,9 +395,44 @@ app/
 
 ---
 
-# Module 69.5 - nented route with nav link
+# Module 69.5 - nented route with nav link + useRouter()
 
 ## Type of linking and navigating
+
+[Server Rendering](https://nextjs.org/docs/app/getting-started/linking-and-navigating#server-rendering:~:text=the%20following%20concepts%3A-,Server%20Rendering,-Prefetching)
+[Prefetching](https://nextjs.org/docs/app/getting-started/linking-and-navigating#prefetching)
+[Streaming](https://nextjs.org/docs/app/getting-started/linking-and-navigating#streaming)
+[Client-side transitions](https://nextjs.org/docs/app/getting-started/linking-and-navigating#client-side-transitions)
+
+## Server Rendering
+
+Next.js automatically prefetches routes linked with the `<Link>` component when they enter the user's viewport. [Page doesent reload to fetch the data]
+
+```
+import Link from 'next/link'
+
+export default function Layout() {
+  return (
+    <html>
+      <body>
+        <nav>
+          {/* Prefetched when the link is hovered or enters the viewport */}
+          <Link href="/blog">Blog</Link>
+          {/* No prefetching */}
+          <a href="/contact">Contact</a>
+        </nav>
+        {children}
+      </body>
+    </html>
+  )
+}
+```
+
+## Prefetching
+
+## Streaming
+
+## Client-side transitions
 
 #### How Layouts Work with Nested Routes (Key Benefit)
 
@@ -467,6 +519,50 @@ Nested routes + nested layouts make building complex apps (dashboards, admin pan
 For a live example, check the tutorial repo: https://github.com/learnwithsumit/next14-crash-course (look in the `app/` folder).
 
 ---
+
+## convert server site rendering to client site rendering
+
+- add these at line 1/ first line to any components to make ssr to csr : `use client`
+
+## [useRouter](https://nextjs.org/docs/app/api-reference/functions/use-router#userouter) hook
+
+- how to import :
+
+```
+import { useRouter) from "next/navigation";
+
+const router useRouter();
+```
+
+- example :
+
+```
+'use client' <!-- conver to ssr -> csr -->
+
+import { useRouter } from 'next/navigation' <!-- import useRouter -->
+
+export default function Page() {
+  const router = useRouter()   <!-- call hook -->
+
+  return (
+    <button type="button"
+    onClick={() => router.push('/dashboard')    <!-- navigate to /dashboad page -->
+    }>
+      Dashboard
+    </button>
+  )
+}
+```
+
+## useRouter() = router
+
+- router.push('/dashboard')
+- router.replace('/dashboard')
+- router.refresh()
+- router.prefetch('/dashboard')
+- router.back()
+- router.forward()
+-
 
 # Module 69.6
 
