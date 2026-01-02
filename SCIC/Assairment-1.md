@@ -1,3 +1,70 @@
+# !======= REQUIREMENT =======!
+
+### **Task: Email Writing Assignment**
+
+**Objective:** To write a professional email to a hiring manager to inquire about a recent job posting in their website for a **Frontend Web Developer** position.
+
+**Task Instructions:**
+
+Write an email to the hiring manager, Steven Smith, at TechNova Solutions, inquiring about the job posting for a Frontend Developer role. Your email should include the following points:
+
+**Email of hiring manager:** smith@scic12.com
+
+1. Briefly mention you are interested in the role.
+2. Ask Two Key Questions:
+3. Can the interview be conducted online if selected?
+4. What is the expected joining date for the selected candidate?
+5. Use a polite and formal tone.
+6. The email should be clear and to the point (Maximum 100-150 words).
+7. Include a proper subject line, greetings, body and closing.
+8. The full email should be in English.
+9. For any other things you want to add in the email, you can use your own imagination and creativity.
+10. A professional email signature
+
+**Submission instructions:**
+
+1. Write down the whole email with
+2. Email address where you are sending email.(Hiring manager)
+3. Proper subject line.
+4. Complete email body having Greetings, main body and proper closing.
+5. You can write down the email in a google doc. And upload its pdf version in your google drive.
+6. Please submit the drive link of the pdf version of your email writing assignment in the submission field. Please make sure the link is set in ‘Anyone with the link can view’ mode. Otherwise, you will be given 0.
+
+- **\*Please note that no doc file submission is accepted. For any doc submission, you will be given 0 in this assignment.\*\***
+
+**Task: Interpersonal Backpack**
+
+1. Tell me about yourself.
+2. Why should we hire you?/ Why are you suitable for the post?
+3. How do you stay motivated and engaged in your work over the long term?
+4. Tell me about your three weak points.
+5. What is your biggest strength?
+6. What is the skill that makes you different from others?
+7. What was your biggest mistake in your life?
+8. What is the skill that makes you different from others?
+9. What types of projects or technologies are you most excited to work on in the future?
+10. How do you handle situations where you encounter a problem for which you don't immediately have a solution?
+11. Where do you see yourself in the next 5 years?
+12. How do you ensure the quality of your work?
+13. How do you handle criticism or feedback?
+14. What do you do when you feel overwhelmed at work?
+15. Can you describe a situation where you failed? What did you learn from it?
+
+- **\*You must answer 10 out of the 15 questions in a doc file.**
+
+**Make sure the document is set to “Anyone with the link” access, and submit the link as your assignment.\*\***
+
+**What needs to be submitted**
+
+- Your Email PDF link
+- Your Interpersonal Backpack Doc link
+
+**Please make sure the link is set in ‘Anyone with the link can view’ mode.**
+
+---
+
+# !======= END =======!
+
 # Email writing :
 
 [email writing](https://youtu.be/3GNk0uaxbso?si=8-VUSNAhkzmIc8Rm)
