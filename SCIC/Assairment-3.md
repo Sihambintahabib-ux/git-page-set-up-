@@ -10,42 +10,42 @@ This applies to any project type, including **Freelance, Recipe, Event, Sports,
 
 ### **1. Global UI & Design Rules**
 
-- Maximum **3 primary colors** (+ optional neutral).
-- Support **Light & Dark mode** with proper text-background contrast.
-- Maintain consistent layout, spacing, padding, and alignment across all pages.
-- Cards, buttons, and reusable components must have consistent **size, border radius, and style.**
-- Forms must include **validation, error messages, success states, and loaders/skeletons.**
-- Fully responsive for **mobile, tablet, and desktop**, touch-friendly interactions.
-- No placeholder or dummy content. UI must be **professional and portfolio-ready.**
+- ❌Maximum **3 primary colors** (+ optional neutral).
+- ✅Support **Light & Dark mode** with proper text-background contrast.
+- ✅Maintain consistent layout, spacing, padding, and alignment across all pages.
+- ✅Cards, buttons, and reusable components must have consistent **size, border radius, and style.**
+- ❌Forms must include **validation, error messages, success states, and loaders/skeletons.**
+- ✅Fully responsive for **mobile, tablet, and desktop**, touch-friendly interactions.
+- ✅No placeholder or dummy content. UI must be **professional and portfolio-ready.**
 
 ### **2. Home / Landing Page**
 
 **Navbar**
 
-- Full-width background matching primary/secondary colors.
-- Logged-out: minimum **3 routes;** logged-in: minimum **5 routes.**
-- Protected routes appear after login in the navbar or dropdown.
-- At least **1 advanced menu** (dropdown, profile menu, etc.).
-- Sticky/fixed navbar.
-- Fully responsive.
+- ✅Full-width background matching primary/secondary colors.
+- ✅Logged-out: minimum **3 routes;** logged-in: minimum **5 routes.**
+- ❌Protected routes appear after login in the navbar or dropdown.
+- ❌At least **1 advanced menu** (dropdown, profile menu, etc.).
+- ❌Sticky/fixed navbar.
+- ✅Fully responsive.
 
 **Hero / Carousel Section**
 
-- Max height **60–70%** of screen.
-- Interactive (slider, CTA, animation, auto/manual control).
-- Clear visual hint to the next section.
+- ❌Max height **60–70%** of screen.
+- ❌Interactive (slider, CTA, animation, auto/manual control).
+- ❌Clear visual hint to the next section.
 
 **Sections**
 
-- Minimum **10 meaningful sections**. Examples: Features, Services, Categories, Highlights, Statistics, Testimonials, Blogs, Newsletter, FAQ, CTA, etc.
+- ❌Minimum **10 meaningful sections**. Examples: Features, Services, Categories, Highlights, Statistics, Testimonials, Blogs, Newsletter, FAQ, CTA, etc.
 
 **\*Note :** (These are just examples; students are free to design their own sections based on project context and ideas.\*
 
 **Footer**
 
 - Fully functional footer.
-- Working links only.
-- Contact info and social links included.
+- ❌Working links only.
+- ❌Contact info and social links included.
 
 ### **3. Core Listing / Card Section**
 
@@ -53,29 +53,29 @@ This applies to any project type, including **Freelance, Recipe, Event, Sports,
 - Image, Title, Short description, Meta info (price, date, status, location, rating, etc.), “View Details” button
 - Card rules:
 - Same height, same width, same border radius.
-- Desktop: 4 cards per row preferred.
-- Skeleton loader or spinner during loading.
+- ❌Desktop: 4 cards per row preferred.
+- ❌Skeleton loader or spinner during loading.
 
 ### **4. Details Page**
 
-- Publicly accessible.
-- Multiple images/media.
-- Sections include: Overview/Description, Key Information/Specs/Rules, Reviews/Ratings (if applicable), Related/Suggested Items (if applicable).
+- ❌Publicly accessible.
+- ❌Multiple images/media.
+- ❌Sections include: Overview/Description, Key Information/Specs/Rules, Reviews/Ratings (if applicable), Related/Suggested Items (if applicable).
 
 ### **5. Listing / Explore Page**
 
 - Public page with all items.
 - Search bar.
 - Filters: At least 2 fields (e.g., category, price, rating, date, location), additional fields optional.
-- Sorting option.
-- Pagination or infinite scroll.
-- Fully functional filter and search.
+- ❌Sorting option.
+- ❌Pagination or infinite scroll.
+- ❌Fully functional filter and search.
 
 ### **6. Authentication & Authorization**
 
-- Functional login and registration pages with validation & error handling.
-- Demo user/admin credential button (auto-fill login).
-- Social login (Google/Facebook/others).
+- ❌Functional login and registration pages with validation & error handling.
+- ❌Demo user/admin credential button (auto-fill login).
+- ❌Social login (Google/Facebook/others).
 - Clean and professional UI.
 
 ### **7. Dashboard (Role-Based)**
@@ -107,10 +107,10 @@ This applies to any project type, including **Freelance, Recipe, Event, Sports,
 - Even if your project has only a single role, ensure the dashboard is **fully functional and professional.**
 - Include admin features only if an admin role is implemented.
 
-**8. Additional Pages**
+**8. ❌Additional Pages**
 
-- Minimum **2–3 relevant pages** besides home/listing. Examples: About, Contact, Blog, Help/Support, Privacy/Terms.
-- Design must be consistent and complete.
+- ❌Minimum **2–3 relevant pages** besides home/listing. Examples: About, Contact, Blog, Help/Support, Privacy/Terms.
+- ❌Design must be consistent and complete.
 
 ### **9. UX, Responsiveness & Accessibility**
 
@@ -118,7 +118,7 @@ This applies to any project type, including **Freelance, Recipe, Event, Sports,
 - Fully responsive on all devices (mobile, tablet, desktop).
 - Balanced section spacing.
 - All buttons, routes, and links must be clickable.
-- Dark mode must maintain proper text-background contrast.
+- ❌Dark mode must maintain proper text-background contrast.
 
 ### **Submission Requirements**
 
