@@ -131,3 +131,17 @@ This applies to any project type, including **Freelance, Recipe, Event, Sports,
 ---
 
 # !======= END =======!
+
+Submission Requirements :
+Live website URL :
+surge link : https://sihambintahabib-assairment10.surge.sh/
+netlify link : https://assairment10.netlify.app/
+
+GitHub repository :
+frontend : https://github.com/Sihambintahabib-ux/assairment-10-client/tree/scic
+backend: https://github.com/Sihambintahabib-ux/assairment-10-server/tree/scic
+Demo credentials :
+User email : abc@gmail.com
+password : abc@gmail.com
+Admin email : admin@gmail.com
+password : admin@gmail.com

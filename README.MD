@@ -185,6 +185,7 @@ surge dist
 - Deploy `surge dist`
 
 ## for 1st time deploy :
+
 - `npm install --global surge`
 - public : `_redirects` : `/* /index.html 200`
 - public : `CNAME` : `sihambintahabib-assairment$.surge.sh`
@@ -193,9 +194,10 @@ surge dist
 - `surge dist`
 
 ## for 2nd time deploy :
-  - 1st : `npm run build`
-  - 2nd : copy `index.html` code and paste to `200.html` in `dist` folder
-  - 3rd : `surge dist`
+
+- 1st : `npm run build`
+- 2nd : copy `index.html` code and paste to `200.html` in `dist` folder
+- 3rd : `surge dist`
   [ changer vercel client site domain url by surge url : https://vercel.com/sihams-projects-0a3f7554/assairment11/settings/environment-variables]
 
 ---
@@ -771,6 +773,15 @@ function App() {
 
 ## live link :
 
+ASSAIREMENT : 8
+
+live link : https://effervescent-mousse-cde66a.netlify.app/
+live link : https://graceful-mooncake-87b5fe.netlify.app/
+<br>
+github link : https://github.com/Sihambintahabib-ux/assairment-8.git
+
+---
+
 ASSAIREMENT : 9
 git repo link : https://github.com/Sihambintahabib-ux/assairment-9.git
 <br>
@@ -785,6 +796,8 @@ client :
 git repo link : https://github.com/Sihambintahabib-ux/assairment-10-client.git
 <br>
 live link : https://sihambintahabib-assairment10.surge.sh/
+live link : https://assairment10.netlify.app/
+
 <br>
 server :
 git repo link : https://github.com/Sihambintahabib-ux/assairment-10-server.git
